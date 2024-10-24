@@ -8,7 +8,7 @@ public class CourseManager {
     }
     // method to add a student to the list
     public void addStudent(Student student) {
-        students.add(student);
+        students.add(student.getAge());
     }
     // method to display the details of all students
     public void displayAllStudents() {
