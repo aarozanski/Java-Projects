@@ -10,5 +10,12 @@ public class Student extends Person {
         super(name, age);
     }
 
+    public void enrollCourses(String [] courses) {
+
+    }
+
+    public void enrollCourses(String course) {
+        enrolledCourses.add(course);
+    }
 
 }
