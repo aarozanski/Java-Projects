@@ -23,6 +23,10 @@ public class Student extends Person {
         enrolledCourses.add(course); // adds the single course to the list
         updateTuition(); // update tuition whenever a new course is added
     }
+    // public method to update tuition based on enrolled courses
+    public void updateTuition() {
+        setTuition(enrolledCourses.size() * 500);
+    }
 
     public double getTuition() {
         return tuition;
