@@ -6,7 +6,9 @@ public class Student extends Person {
     private String[] enrolledCourses;
     private double tuition;
 
-    public Student(String name, int age) {
+    public Student(String name, int age, int studentID, String[] enrolledCourses, double tuition) {
         super(name, age);
     }
+
+
 }
