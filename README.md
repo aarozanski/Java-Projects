@@ -16,7 +16,7 @@ Before setting up the project, make sure you have the following:
 
 1. Clone the repository from GitHub using Git:
    
-   git clone https://github.com/Jizelino/my-repository.git
+   git clone https://github.com/Jizelino/my-repository.git.
    cd your-repository
 
 2. Open the project in IntelliJ IDEA 
