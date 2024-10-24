@@ -20,9 +20,11 @@ public class Person {
         return age;
     }
 
+
     // method to display the name and age
     public void displayDetails() {
         System.out.println("Name: " + name + ", Age: " + age);
     }
+
 }
 
