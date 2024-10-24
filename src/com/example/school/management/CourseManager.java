@@ -1,21 +1,27 @@
 package com.example.school.management;
 
-public class CourseManager {
-    private Student[] students;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void Student (Student[] students) {
-        this.students = students;
+public class CourseManager {
+    private final List<Student> students;
+
+    // Constructor
+    public CourseManager() {
+        this.students = new ArrayList<>(); // Initialize the list
     }
-    // method to add a student to the list
+
+    // Method to add a student to the list
     public void addStudent(Student student) {
-        students.add(student.getAge());
+        this.students.add(student); // Correctly add a Student object to the list
     }
-    // method to display the details of all students
+
+    // Method to display the details of all students
     public void displayAllStudents() {
         System.out.println("List of all students:");
-        for(Student student : students) {
-            student.displayDetails(); // Assuming Student class has a method to display details
+        for (Student student : students) {
+            student.displayDetails(); // Correct invocation of displayDetails method
         }
     }
-
 }
+
