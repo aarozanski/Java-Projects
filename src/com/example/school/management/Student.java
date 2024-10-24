@@ -8,14 +8,10 @@ public class Student extends Person {
     private final List<String> enrolledCourses;  // Use List instead of array for dynamic additions
     private double tuition;
 
-    public Student(String name, int age, int studentID, String[] enrolledCoursesArray, double tuition) {
+    public Student(String name, int age) {
         super(name, age);
-        this.studentID = studentID;
-        this.enrolledCourses = new ArrayList<>();
-        for (String course : enrolledCoursesArray) {
-            this.enrolledCourses.add(course);
-        }
-        this.tuition = tuition;
+        this.enrolledCourses = new ArrayList<>(); // Initialize the list
+        this.tuition = 0; // Initialize tuition
     }
 
     // overloaded method to enroll with an array of courses
