@@ -1,4 +1,18 @@
 package com.example.school.management;
 
 public class Main {
+    public static void main(String[] args) {
+        // Create a CourseManager object
+        CourseManager courseManager = new CourseManager();
+
+        // Create Student objects
+        Student adinai = new Student("Adinai", 21);
+        Student yasmin = new Student("Yasmin", 14);
+        Student aisun = new Student("Aisun", 10);
+
+        // Enroll students in courses
+        adinai.enrollCourses(new String[] {"Math", "Science"});
+        yasmin.enrollCourses("History");
+        aisun.enrollCourses(new String[] {"Economics", "Art"});
+    }
 }
