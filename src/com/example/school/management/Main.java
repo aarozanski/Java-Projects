@@ -10,6 +10,11 @@ public class Main {
         Student yasmin = new Student("Yasmin", 14);
         Student aisun = new Student("Aisun", 10);
 
+        // Add students to the CourseManager
+        courseManager.addStudent(adinai);
+        courseManager.addStudent(yasmin);
+        courseManager.addStudent(aisun);
+
         // Enroll students in courses
         adinai.enrollCourses(new String[] {"Math", "Science"});
         yasmin.enrollCourses("History");
