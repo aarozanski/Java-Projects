@@ -16,10 +16,12 @@ public class Student extends Person {
         for (String course : courses) {
            enrolledCourses.add(course); // adds each course from the array to the list
         }
+        updateTuition(); // update tuition whenever new courses are added
     }
     // overloaded method to enroll with a single course
     public void enrollCourses(String course) {
         enrolledCourses.add(course); // adds the single course to the list
+        updateTuition(); // update tuition whenever a new course is added
     }
 
     public double getTuition() {
