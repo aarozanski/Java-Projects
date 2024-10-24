@@ -5,36 +5,47 @@ import java.util.List;
 
 public class Student extends Person {
     private int studentID;
-    private final List<String> enrolledCourses;  // Use List instead of array for dynamic additions
+    private List<String> enrolledCourses;
     private double tuition;
 
+    // Existing constructor
+    public Student(String name, int age, int studentID, String[] enrolledCoursesArray, double tuition) {
+        super(name, age);
+        this.studentID = studentID;
+        this.enrolledCourses = new ArrayList<>();
+        for (String course : enrolledCoursesArray) {
+            this.enrolledCourses.add(course);
+        }
+        this.tuition = tuition;
+    }
+
+    // New constructor
     public Student(String name, int age) {
         super(name, age);
-        this.enrolledCourses = new ArrayList<>(); // Initialize the list
-        this.tuition = 0; // Initialize tuition
+        this.studentID = -1; // Default ID, or handle differently
+        this.enrolledCourses = new ArrayList<>();
+        this.tuition = 0;
     }
 
-    // overloaded method to enroll with an array of courses
     public void enrollCourses(String[] courses) {
         for (String course : courses) {
-            this.enrolledCourses.add(course);  // Corrected to use List's add method
+            this.enrolledCourses.add(course);
         }
-        updateTuition();  // Correct usage
+        updateTuition();
     }
 
-    // overloaded method to enroll with a single course
     public void enrollCourses(String course) {
-        this.enrolledCourses.add(course);  // Corrected to use List's add method
-        updateTuition();  // Correct usage
+        this.enrolledCourses.add(course);
+        updateTuition();
     }
 
-    // public method to update tuition based on enrolled courses
     public void updateTuition() {
-        this.tuition = this.enrolledCourses.size() * 500;  // Calculates tuition based on number of courses
+        this.tuition = this.enrolledCourses.size() * 500;
     }
 
     public double getTuition() {
         return tuition;
     }
 }
+
 
