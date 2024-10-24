@@ -7,7 +7,7 @@ public class Main {
 
         // Create Student objects
         Student adinai = new Student("Adinai", 21, 1, new String[]{}, 1500);
-        Student yasmin = new Student("Yasmin", 14, 2, new String[]{}, 100);
+        Student yasmin = new Student("Yasmin", 14, 2, new String[]{}, 1500);
         Student aisun = new Student("Aisun", 10, 3, new String[]{}, 900);
 
         // Add students to the CourseManager
