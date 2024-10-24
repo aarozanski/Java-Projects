@@ -16,7 +16,7 @@ public class Main {
         courseManager.addStudent(aisun);
 
         // Enroll students in courses
-        adinai.enrollCourses(new String[] {"Math", "Science"});
+        adinai.enrollCourses(new String[] {"Math", "Science", "Computer Science"});
         yasmin.enrollCourses("History");
         aisun.enrollCourses(new String[] {"Economics", "Art"});
 
