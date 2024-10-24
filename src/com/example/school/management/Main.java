@@ -14,5 +14,13 @@ public class Main {
         adinai.enrollCourses(new String[] {"Math", "Science"});
         yasmin.enrollCourses("History");
         aisun.enrollCourses(new String[] {"Economics", "Art"});
+
+        // Update tuition based on courses enrolled
+        adinai.updateTuition();
+        yasmin.updateTuition();
+        aisun.updateTuition();
+
+        // Display student tuition details
+        System.out.println();
     }
 }
