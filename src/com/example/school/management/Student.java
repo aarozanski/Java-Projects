@@ -1,35 +1,47 @@
-package com.example.school.management;
-
-import java.util.List;
+import java.util.ArrayList;
 
 public class Student extends Person {
-
     private int studentID;
-    private String[] enrolledCourses;
+    private ArrayList<String> enrolledCourses = new ArrayList<>();
     private double tuition;
 
-    public Student(String name, int age, int studentID, String[] enrolledCourses, double tuition) {
+    public Student(String name, int age, int studentID, String[] enrolledCoursesArray, double tuition) {
         super(name, age);
-    }
-   // overloaded method to enroll with an array of courses
-    public void enrollCourses(String [] courses) {
-        for (String course : courses) {
-           enrolledCourses.add(course); // adds each course from the array to the list
+        this.studentID = studentID;
+        for (String course : enrolledCoursesArray) {
+            this.enrolledCourses.add(course);
         }
-        updateTuition(); // update tuition whenever new courses are added
+        this.tuition = tuition;
     }
-    // overloaded method to enroll with a single course
+
+    public void enrollCourses(String[] courses) {
+        for (String course : courses) {
+            enrolledCourses.add(course);
+        }
+        updateTuition();
+    }
+
     public void enrollCourses(String course) {
-        enrolledCourses.add(course); // adds the single course to the list
-        updateTuition(); // update tuition whenever a new course is added
+        enrolledCourses.add(course);
+        updateTuition();
     }
-    // public method to update tuition based on enrolled courses
+
     public void updateTuition() {
         setTuition(enrolledCourses.size() * 500);
+    }
+
+    private void setTuition(double tuition) {
+        this.tuition = tuition;
     }
 
     public double getTuition() {
         return tuition;
     }
 
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("Current tuition: $" + tuition);
+    }
 }
+
