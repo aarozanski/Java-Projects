@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Student extends Person {
     private int studentID;
-    private List<String> enrolledCourses;
+    private final List<String> enrolledCourses;
     private double tuition;
 
     // Existing constructor
@@ -13,9 +13,7 @@ public class Student extends Person {
         super(name, age);
         this.studentID = studentID;
         this.enrolledCourses = new ArrayList<>();
-        for (String course : enrolledCoursesArray) {
-            this.enrolledCourses.add(course);
-        }
+        for (String course : enrolledCoursesArray) this.enrolledCourses.add(course);
         this.tuition = tuition;
     }
 
@@ -28,9 +26,7 @@ public class Student extends Person {
     }
 
     public void enrollCourses(String[] courses) {
-        for (String course : courses) {
-            this.enrolledCourses.add(course);
-        }
+        for (String course : courses) this.enrolledCourses.add(course);
         updateTuition();
     }
 
