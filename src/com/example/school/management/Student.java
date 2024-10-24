@@ -11,6 +11,9 @@ public class Student extends Person {
     }
 
     public void enrollCourses(String [] courses) {
+        for (String course : courses) {
+           enrolledCourses.add(course);
+        }
 
     }
 
