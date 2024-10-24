@@ -24,5 +24,8 @@ public class Main {
         System.out.println(adinai.getName() + " - Tuition: $" + adinai.getTuition());
         System.out.println(yasmin.getName() + " - Tuition: $" + yasmin.getTuition());
         System.out.println(aisun.getName() + " - Tuition: $" + aisun.getTuition());
+
+        // Display details of all enrolled students
+        courseManager.displayAllStudents();
     }
 }
