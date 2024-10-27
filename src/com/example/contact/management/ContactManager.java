@@ -11,7 +11,7 @@ public class ContactManager {
         this.contact = new ArrayList<>(); // Initialize the list
     }
 
-
+    // Method to add a contact to the ArrayList
     public void addContact(ContactFunctions contact){
         this.contact.add(contact);
     }
