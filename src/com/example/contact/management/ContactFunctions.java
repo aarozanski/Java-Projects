@@ -1,4 +1,6 @@
 package com.example.contact.management;
 
-public class ContactFunctions {
+public class ContactFunctions extends ContactDetailsDeclare {
+
+
 }
