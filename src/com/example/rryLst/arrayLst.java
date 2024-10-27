@@ -8,6 +8,8 @@ public class arrayLst {
 
         ArrayList <String> students = new ArrayList <String>();
         students.add("Adinai");
+        students.add("Yasmin");
+        students.add("Aisun");
         System.out.println(students);
     }
 }
