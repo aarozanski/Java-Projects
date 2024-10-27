@@ -12,6 +12,8 @@ public class arrayLst {
         students.add("Aisun");
         System.out.println(students);
 
+        students.remove("Adinai");
+
 
     }
 }
