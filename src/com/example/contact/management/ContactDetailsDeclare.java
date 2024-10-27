@@ -1,6 +1,6 @@
 package com.example.contact.management;
 
-public class Contact {
+public class ContactDetailsDeclare {
 // This is the first file I created to manipulate with Contact data
 // Declare the fields for names , emails and phone numbers
 
@@ -8,7 +8,7 @@ private String name;
 private String email;
 private String phoneNumber;
 
-public Contact (String name, String email, String phoneNumber) {
+public ContactDetailsDeclare(String name, String email, String phoneNumber) {
     this.name = name;
     this.email = email;
     this.phoneNumber = phoneNumber;
