@@ -11,5 +11,7 @@ public class arrayLst {
         students.add("Yasmin");
         students.add("Aisun");
         System.out.println(students);
+
+
     }
 }
