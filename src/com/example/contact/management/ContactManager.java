@@ -15,4 +15,9 @@ public class ContactManager {
     public void addContact(ContactFunctions contact){
         this.contact.add(contact);
     }
+
+    // Method to remove a contact to the ArrayList
+    public void removeContact(ContactFunctions contact){
+        this.contact.remove(contact);
+    }
 }
