@@ -13,6 +13,9 @@ public class arrayLst {
         System.out.println(students);
 
         students.remove("Adinai");
+        System.out.println(students);
+
+
 
 
     }
