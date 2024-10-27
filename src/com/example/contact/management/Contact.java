@@ -1,22 +1,32 @@
-package com.example.rryLst;
+package com.example.contact.management;
 
-import java.util.ArrayList;
+public class Contact {
 
-public class arrayLst {
+// Declare the fields for names , emails and phone numbers
 
-    public static void main(String[] args) {
+private String name;
+private String email;
+private String phoneNumber;
 
-        ArrayList <String> students = new ArrayList <String>();
-        students.add("Adinai");
-        students.add("Yasmin");
-        students.add("Aisun");
-        System.out.println(students);
+public String Contact (String name, String email, String phoneNumber) {
+    this.name = name;
+    this.email = email;
+    this.phoneNumber = phoneNumber;
 
-        students.remove("Adinai");
-        System.out.println(students);
-
-
-
-
+// Adding getters for the fields to allow access from outside the class
+    public String getName() {
+        return name;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+
+}
+
 }
