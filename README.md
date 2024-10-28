@@ -1,7 +1,3 @@
-## Overview
-
-This is a simple Java-based project that demonstrates [specific functionality].  
-It includes implementations of [key features] and aims to [project's purpose].
 
 ## Prerequisites
 
