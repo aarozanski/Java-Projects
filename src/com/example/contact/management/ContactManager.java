@@ -1,10 +1,10 @@
 package com.example.contact.management;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ContactManager {
 
-    private final ArrayList<ContactFunctions> contact;
 
     // Constructor to initialize the contacts ArrayList
     public ContactManager() {
@@ -20,4 +20,12 @@ public class ContactManager {
     public void removeContact(ContactFunctions contact){
         this.contact.remove(contact);
     }
+
+    HashMap <String, String> namePhone = new HashMap<String, String>();
+
+    namePhone.put("Adinai", "3120000000");
+    namePhone.put("Adinai", "3120000001");
+    namePhone.put("Adinai", "3120000003");
+
+
 }
