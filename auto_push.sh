@@ -20,7 +20,7 @@ while true; do
     git add .
 
     # Commit with a timestamp
-    git commit -m "Auto-commit for java projects: $(date)"
+    git commit -m "My auto-commit for java projects: $(date)"
 
     # Push to GitHub
     git push origin main
