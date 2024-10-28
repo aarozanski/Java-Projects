@@ -1,31 +1,114 @@
-package com.example.contact.management;
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+
+class Contact {
+    private String name;
+    private String phoneNumber;
+    private String email;
+
+    public Contact(String name, String phoneNumber, String email) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Phone Number: " + phoneNumber + ", Email: " + email;
+    }
+}
 
 public class ContactManager {
+    private ArrayList<Contact> contacts = new ArrayList<>();
+    private HashMap<String, String> contactPhoneLookup = new HashMap<>();
+    private HashSet<String> uniqueEmailDomains = new HashSet<>();
 
-
-    // Constructor to initialize the contacts ArrayList
-    public ContactManager() {
-        this.contact = new ArrayList<>(); // Initialize the list
+    public void addContact(String name, String phoneNumber, String email) {
+        for (Contact contact : contacts) {
+            if (contact.getName().equalsIgnoreCase(name)) {
+                System.out.println("Contact with this name already exists.");
+                return;
+            }
+        }
+        Contact newContact = new Contact(name, phoneNumber, email);
+        contacts.add(newContact);
+        contactPhoneLookup.put(name.toLowerCase(), phoneNumber);
+        uniqueEmailDomains.add(getDomainFromEmail(email));
+        System.out.println("Contact added successfully.");
     }
 
-    // Method to add a contact to the ArrayList
-    public void addContact(ContactFunctions contact){
-        this.contact.add(contact);
+    public void displayContacts() {
+        if (contacts.isEmpty()) {
+            System.out.println("No contacts to display.");
+        } else {
+            contacts.forEach(System.out::println);
+        }
     }
 
-    // Method to remove a contact to the ArrayList
-    public void removeContact(ContactFunctions contact){
-        this.contact.remove(contact);
+    public void removeContact(String name) {
+        boolean removed = contacts.removeIf(contact -> contact.getName().equalsIgnoreCase(name));
+        if (removed) {
+            contactPhoneLookup.remove(name.toLowerCase());
+            System.out.println("Contact removed successfully.");
+        } else {
+            System.out.println("Contact not found.");
+        }
     }
 
-    HashMap <String, String> namePhone = new HashMap<String, String>();
+    public void searchContact(String name) {
+        String phoneNumber = contactPhoneLookup.get(name.toLowerCase());
+        if (phoneNumber != null) {
+            System.out.println("Phone Number for " + name + ": " + phoneNumber);
+        } else {
+            System.out.println("Contact not found.");
+        }
+    }
 
-    namePhone.put("Adinai", "3120000000");
-    namePhone.put("Adinai", "3120000001");
-    namePhone.put("Adinai", "3120000003");
+    public void updatePhoneNumber(String name, String newPhoneNumber) {
+        for (Contact contact : contacts) {
+            if (contact.getName().equalsIgnoreCase(name)) {
+                contact.setPhoneNumber(newPhoneNumber);
+                contactPhoneLookup.put(name.toLowerCase(), newPhoneNumber);
+                System.out.println("Phone number updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Contact not found.");
+    }
 
+    public void displayUniqueDomains() {
+        if (uniqueEmailDomains.isEmpty()) {
+            System.out.println("No unique domains to display.");
+        } else {
+            System.out.println("Unique email domains:");
+            uniqueEmailDomains.forEach(System.out::println);
+        }
+    }
 
+    public void sortAndDisplayContacts() {
+        Collections.sort(contacts, (c1, c2) -> c1.getName().compareToIgnoreCase(c2.getName()));
+        displayContacts();
+    }
+
+    private String getDomainFromEmail(String email) {
+        return email.substring(email.indexOf('@') + 1);
+    }
 }
