@@ -1,12 +1,13 @@
+package com.example.contact.management;
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 
 class Contact {
-    private String name;
+    private final String name;
     private String phoneNumber;
-    private String email;
+    private final String email;
 
     public Contact(String name, String phoneNumber, String email) {
         this.name = name;
@@ -37,9 +38,9 @@ class Contact {
 }
 
 public class ContactManager {
-    private ArrayList<Contact> contacts = new ArrayList<>();
-    private HashMap<String, String> contactPhoneLookup = new HashMap<>();
-    private HashSet<String> uniqueEmailDomains = new HashSet<>();
+    private final ArrayList<Contact> contacts = new ArrayList<>();
+    private final HashMap<String, String> contactPhoneLookup = new HashMap<>();
+    private final HashSet<String> uniqueEmailDomains = new HashSet<>();
 
     public void addContact(String name, String phoneNumber, String email) {
         for (Contact contact : contacts) {
@@ -104,7 +105,7 @@ public class ContactManager {
     }
 
     public void sortAndDisplayContacts() {
-        Collections.sort(contacts, (c1, c2) -> c1.getName().compareToIgnoreCase(c2.getName()));
+        contacts.sort((c1, c2) -> c1.getName().compareToIgnoreCase(c2.getName()));
         displayContacts();
     }
 

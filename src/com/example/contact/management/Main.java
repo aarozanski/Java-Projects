@@ -1,3 +1,5 @@
+package com.example.contact.management;
+
 import java.util.Scanner;
 
 public class Main {
