@@ -1,9 +1,9 @@
 package com.example.contact.management;
 
 class Contact {
-    private String name;
+    private final String name;
     private String phoneNumber;
-    private String email;
+    private final String email;
 
     public Contact(String name, String phoneNumber, String email) {
         this.name = name;

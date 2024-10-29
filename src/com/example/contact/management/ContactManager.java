@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class ContactManager {
-    private ArrayList<Contact> contacts = new ArrayList<>();
-    private HashMap<String, String> contactPhoneLookup = new HashMap<>();
-    private HashSet<String> uniqueEmailDomains = new HashSet<>();
+    private final ArrayList<Contact> contacts = new ArrayList<>();
+    private final HashMap<String, String> contactPhoneLookup = new HashMap<>();
+    private final HashSet<String> uniqueEmailDomains = new HashSet<>();
 
     // Add a new contact
     public void addContact(String name, String phoneNumber, String email) {
