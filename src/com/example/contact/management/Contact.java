@@ -2,9 +2,9 @@ package com.example.contact.management;
 // This class represents a single contact with a name, phone number, and email.
 class Contact {
     // Private variables to store contact information
-    private String name;           // Stores the contact's name
+    private final String name;           // Stores the contact's name
     private String phoneNumber;     // Stores the contact's phone number
-    private String email;           // Stores the contact's email address
+    private final String email;           // Stores the contact's email address
 
     // Constructor: This method is called when we create a new Contact.
     // It sets the name, phone number, and email of the contact.

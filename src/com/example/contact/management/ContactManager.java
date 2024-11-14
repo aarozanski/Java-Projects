@@ -7,13 +7,13 @@ import java.util.HashSet;     // Imports HashSet for storing unique email domain
 // This class manages a list of contacts and allows adding, searching, and removing contacts.
 public class ContactManager {
     // List of all contacts
-    private ArrayList<Contact> contacts = new ArrayList<>();
+    private final ArrayList<Contact> contacts = new ArrayList<>();
 
     // Map to quickly find a contact's phone number by name
-    private HashMap<String, String> contactPhoneLookup = new HashMap<>();
+    private final HashMap<String, String> contactPhoneLookup = new HashMap<>();
 
     // Set to store unique email domains (e.g., "gmail.com", "yahoo.com")
-    private HashSet<String> uniqueEmailDomains = new HashSet<>();
+    private final HashSet<String> uniqueEmailDomains = new HashSet<>();
 
     // Method to add a new contact to the manager
     public void addContact(String name, String phoneNumber, String email) {
