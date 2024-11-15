@@ -1,13 +1,15 @@
 package com.example.university;
 
 public class FullTimeProfessor extends Professor {
-    public FullTimeProfessor(String name, Department department) {
-        super(name, department);
-        calculateSalary();
+    // Constructor that passes the name to the superclass
+    public FullTimeProfessor(String name) {
+        super(name);
     }
 
+    // Implementation of teaching behavior specific to full-time professors
     @Override
-    public void calculateSalary() {
-        setSalary(6000); // Example fixed salary
+    public void teachCourse() {
+        System.out.println(getName() + " is teaching full-time.");
     }
 }
+

@@ -1,6 +1,7 @@
 package com.example.university;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Student {
     private String name; // Store the student's name
