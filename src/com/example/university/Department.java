@@ -1,35 +1,40 @@
 package com.example.university;
-import java.util.ArrayList;
 
 public class Department {
-    private String name;
-    private ArrayList<Professor> professors;
-    private ArrayList<Course> courses;
+    private String name; // Store the name of the department
+    private List<Professor> professors; // List to hold professors associated with the department
+    private List<Course> courses; // List to hold courses offered by the department
 
+    // Constructor to initialize the Department with a name
     public Department(String name) {
         this.name = name;
-        this.professors = new ArrayList<>();
-        this.courses = new ArrayList<>();
+        this.professors = new ArrayList<>(); // Initialize the list of professors
+        this.courses = new ArrayList<>(); // Initialize the list of courses
     }
 
+    // Method to add a professor to the department
     public void addProfessor(Professor professor) {
-        professors.add(professor);
+        this.professors.add(professor);
     }
 
+    // Method to add a course to the department
     public void addCourse(Course course) {
-        courses.add(course);
+        this.courses.add(course);
     }
 
-    // Getters for the department name, professors, and courses
+    // Getter for the department name
     public String getName() {
         return name;
     }
 
-    public ArrayList<Professor> getProfessors() {
+    // Getter for the list of professors
+    public List<Professor> getProfessors() {
         return professors;
     }
 
-    public ArrayList<Course> getCourses() {
+    // Getter for the list of courses
+    public List<Course> getCourses() {
         return courses;
     }
 }
+
