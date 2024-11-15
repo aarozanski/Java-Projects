@@ -1,5 +1,8 @@
 package com.example.university;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Department {
     private String name; // Store the name of the department
     private List<Professor> professors; // List to hold professors associated with the department
