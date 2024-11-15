@@ -16,7 +16,7 @@ public class Main {
         csDepartment.addCourse(algorithms);
 
         // Create students
-        Student student1 = new Student("Jane Doe", 101);
+        Student student1 = new Student("Jason Drug", 101);
         Student student2 = new Student("Mark Lee", 102);
 
         // Enroll students in courses
