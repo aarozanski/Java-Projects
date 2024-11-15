@@ -13,7 +13,7 @@ public class UniversitySystem {
         System.out.println("Department created: " + csDepartment.getName());
 
         // Create professors and add them to the Computer Science department
-        Professor drSmith = new FullTimeProfessor("Dr. John Smith");
+        ProfessorAbstract drSmith = new FullTimeProfessor("Dr. John Smith");
         csDepartment.addProfessor(drSmith);
 
         // Confirm addition of Dr. Smith to the department

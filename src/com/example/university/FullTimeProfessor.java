@@ -1,6 +1,6 @@
 package com.example.university;
 
-public class FullTimeProfessor extends Professor {
+public class FullTimeProfessor extends ProfessorAbstract {
     // Constructor that passes the name to the superclass
     public FullTimeProfessor(String name) {
         super(name);

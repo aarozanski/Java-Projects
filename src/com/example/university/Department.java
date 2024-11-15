@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Department {
     private String name; // Store the name of the department
-    private List<Professor> professors; // List to hold professors associated with the department
+    private List<ProfessorAbstract> professors; // List to hold professors associated with the department
     private List<Course> courses; // List to hold courses offered by the department
 
     // Constructor to initialize the Department with a name
@@ -16,7 +16,7 @@ public class Department {
     }
 
     // Method to add a professor to the department
-    public void addProfessor(Professor professor) {
+    public void addProfessor(ProfessorAbstract professor) {
         this.professors.add(professor);
     }
 
@@ -31,7 +31,7 @@ public class Department {
     }
 
     // Getter for the list of professors
-    public List<Professor> getProfessors() {
+    public List<ProfessorAbstract> getProfessors() {
         return professors;
     }
 
