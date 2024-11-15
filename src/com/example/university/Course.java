@@ -1,11 +1,12 @@
 package com.example.university;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
-    private String name; // Store the name of the course
+    private final String name; // Store the name of the course
     private int creditHours; // Store the credit hours for the course
-    private List<Student> students; // List to store enrolled students
+    private final List<Student> students; // List to store enrolled students
 
     // Constructor to initialize the Course with name and credit hours
     public Course(String name, int creditHours) {
