@@ -44,13 +44,13 @@ public class Main {
             }
         }
 
-        // Example of polymorphism in action
-        ftProfessor.conductLecture();
-        adjunctProfessor.conductLecture();
-
-        // Example of method overriding
-        ftProfessor.gradeStudents();
-        adjunctProfessor.gradeStudents();
+//        // Example of polymorphism in action
+//        ftProfessor.conductLecture();
+//        adjunctProfessor.conductLecture();
+//
+//        // Example of method overriding
+//        ftProfessor.gradeStudents();
+//        adjunctProfessor.gradeStudents();
     }
 }
 
