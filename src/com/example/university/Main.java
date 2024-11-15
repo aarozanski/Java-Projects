@@ -1,6 +1,30 @@
 package com.example.university;
 
 public class Main {
+    // Define interfaces at the top of the file
+    interface Teach {
+        void conductLecture();
+    }
+
+    interface Evaluatable {
+        void gradeStudents();
+    }
+
+    // Following with class definitions
+    abstract class Professor implements Teach, Evaluatable {
+        // Class implementation
+    }
+
+    class FullTimeProfessor extends Professor {
+        // Implementation details
+    }
+
+    class AdjunctProfessor extends Professor {
+        // Implementation details
+    }
+
+// Other class definitions...
+
     public static void main(String[] args) {
         // Create a department
         Department csDepartment = new Department("Computer Science");
