@@ -11,15 +11,33 @@ public class Main {
     }
 
     // Following with class definitions
-    abstract class Professor implements Teach, Evaluatable {
+    abstract static class Professor implements Teach, Evaluatable {
         // Class implementation
     }
 
-    class FullTimeProfessor extends Professor {
+    static class FullTimeProfessor extends Professor {
+        @Override
+        public void gradeStudents() {
+
+        }
+
+        @Override
+        public void conductLecture() {
+
+        }
         // Implementation details
     }
 
-    class AdjunctProfessor extends Professor {
+    static class AdjunctProfessor extends Professor {
+        @Override
+        public void gradeStudents() {
+
+        }
+
+        @Override
+        public void conductLecture() {
+
+        }
         // Implementation details
     }
 
@@ -56,7 +74,7 @@ public class Main {
         }
 
         System.out.println("Professors:");
-        for (Professor professor : csDepartment.getProfessors()) {
+        for (com.example.university.Professor professor : csDepartment.getProfessors()) {
             System.out.println("- " + professor.getName() + " (Salary: $" + professor.getSalary() + ")");
         }
 
@@ -68,13 +86,13 @@ public class Main {
             }
         }
 
-//        // Example of polymorphism in action
-//        ftProfessor.conductLecture();
-//        adjunctProfessor.conductLecture();
-//
-//        // Example of method overriding
-//        ftProfessor.gradeStudents();
-//        adjunctProfessor.gradeStudents();
+        // Example of polymorphism in action
+        ftProfessor.conductLecture();
+        adjunctProfessor.conductLecture();
+
+        // Example of method overriding
+        ftProfessor.gradeStudents();
+        adjunctProfessor.gradeStudents();
     }
 }
 
