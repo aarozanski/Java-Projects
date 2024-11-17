@@ -16,16 +16,4 @@ public abstract class ProfessorAbstract {
     // Abstract method to be implemented by subclasses to specify how they teach
     public abstract void teachCourse();
 }
-public class FullTimeProfessor extends Professor {
-    // Constructor that passes the name to the superclass
-    public FullTimeProfessor(String name) {
-        super(name);
-    }
-
-    // Implementation of teaching behavior specific to full-time professors
-    @Override
-    public void teachCourse() {
-        System.out.println(getName() + " is teaching full-time.");
-    }
-}
 
