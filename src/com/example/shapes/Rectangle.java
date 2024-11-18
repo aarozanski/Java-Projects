@@ -1,7 +1,9 @@
 package com.example.shapes;
 
+// Rectangle class extends Shape
 public class Rectangle extends Shape {
-    private double length, width;
+    private double length;
+    private double width;
 
     public Rectangle(double length, double width) {
         this.length = length;
@@ -10,11 +12,11 @@ public class Rectangle extends Shape {
 
     @Override
     public double calculateArea() {
-        return length * width;
+        return length * width; // Area formula: length × width
     }
 
     @Override
     public double calculatePerimeter() {
-        return 2 * (length + width);
+        return 2 * (length + width); // Perimeter formula: 2 × (length + width)
     }
 }
