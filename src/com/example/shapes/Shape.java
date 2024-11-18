@@ -6,7 +6,7 @@ public abstract class Shape {
     public abstract void calculatePerimeter();
 
     public void getShapeType() {
-        
+
     }
 
 }
