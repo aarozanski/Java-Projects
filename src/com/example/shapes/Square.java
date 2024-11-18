@@ -1,4 +1,4 @@
 package com.example.shapes;
 
-public class Circle {
+public class Square {
 }
