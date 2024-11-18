@@ -1,5 +1,6 @@
 package com.example.shapes;
 
+// Circle class extends Shape
 public class Circle extends Shape {
     private double radius;
 
@@ -9,12 +10,11 @@ public class Circle extends Shape {
 
     @Override
     public double calculateArea() {
-        return Math.PI * radius * radius;
+        return Math.PI * radius * radius; // Area formula: πr²
     }
 
     @Override
     public double calculatePerimeter() {
-        return 2 * Math.PI * radius;
+        return 2 * Math.PI * radius; // Perimeter formula: 2πr
     }
 }
-    // Implementing the abstract method
