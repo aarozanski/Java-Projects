@@ -1,4 +1,4 @@
 package com.example.shapes;
 
-public class Drawable {
+public class Drawable implements Shape {
 }
