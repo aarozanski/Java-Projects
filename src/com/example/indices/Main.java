@@ -1,4 +1,4 @@
-package com.example.classWork;
+package com.example.indices;
 
 import java.util.HashMap;
 
