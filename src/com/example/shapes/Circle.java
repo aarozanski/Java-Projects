@@ -1,15 +1,20 @@
 package com.example.shapes;
 
 public class Circle extends Shape {
-    // Implementing the abstract method
-    @Override
-    public void calculateArea() {
-        System.out.println("Drawing a Circle");
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     @Override
-    public void calculatePerimeter() {
-        System.out.println("Drawing a Circle");
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return 2 * Math.PI * radius;
     }
 }
     // Implementing the abstract method

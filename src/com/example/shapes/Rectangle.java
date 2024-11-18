@@ -1,14 +1,20 @@
 package com.example.shapes;
 
-public class Rectangle extends Shape {    // Implementing the abstract method
+public class Rectangle extends Shape {
+    private double length, width;
 
-    @Override
-    public void calculateArea() {
-        System.out.println("Drawing a Circle");
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
     }
 
     @Override
-    public void calculatePerimeter() {
-        System.out.println("Drawing a Circle");
+    public double calculateArea() {
+        return length * width;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return 2 * (length + width);
     }
 }
