@@ -2,9 +2,8 @@ package com.example.shapes;
 
 public class Rectangle extends Shape {    // Implementing the abstract method
 
-
     @Override
-    public void calclateArea() {
+    public void calculateArea() {
         System.out.println("Drawing a Circle");
     }
 
