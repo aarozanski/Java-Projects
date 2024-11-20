@@ -6,9 +6,9 @@ Key Features:
 1. Fields:
     name: Stores the student's name.
     age: Stores the student's age.
-Constructor:
-Validates the name and age using custom exceptions.
-If invalid, it throws:
+2. Constructor:
+    Validates the name and age using custom exceptions.
+    If invalid, it throws:
 InvalidNameException if the name is null or empty.
 InvalidAgeException if the age is not between 18 and 60.
 Getters:
