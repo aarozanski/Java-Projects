@@ -32,15 +32,15 @@ The CourseRegistration Class
 This class manages the registration and unregistration of students for a course.
 
 Key Features:
-ArrayList for Storage:
-Stores up to 5 registered students.
-registerStudent(Student student):
-Checks if the course is full. If so, throws CourseFullException.
+1. ArrayList for Storage:
+     -  Stores up to 5 registered students.
+2. registerStudent(Student student):
+     -  Checks if the course is full. If so, throws CourseFullException.
 Adds the student to the list if there’s space.
-unregisterStudent(String name):
+3. unregisterStudent(String name):
 Removes a student by name from the list.
 Throws an exception if the student is not found.
-listStudents():
+4. listStudents():
 Displays all registered students and their details.
 This class enforces the business rules of the course (e.g., maximum 5 students) and provides methods to manage student registrations.
 
