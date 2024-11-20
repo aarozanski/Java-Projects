@@ -36,13 +36,13 @@ Key Features:
      -  Stores up to 5 registered students.
 2. registerStudent(Student student):
      -  Checks if the course is full. If so, throws CourseFullException.
-Adds the student to the list if there’s space.
+     -  Adds the student to the list if there’s space.
 3. unregisterStudent(String name):
-Removes a student by name from the list.
-Throws an exception if the student is not found.
+     -  Removes a student by name from the list.
+     -  Throws an exception if the student is not found.
 4. listStudents():
-Displays all registered students and their details.
-This class enforces the business rules of the course (e.g., maximum 5 students) and provides methods to manage student registrations.
+     -  Displays all registered students and their details.
+     -  This class enforces the business rules of the course (e.g., maximum 5 students) and provides methods to manage student registrations.
 
 Step 4: 
 The Main Class
