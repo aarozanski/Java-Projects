@@ -9,10 +9,10 @@ Key Features:
 2. Constructor:
     Validates the name and age using custom exceptions.
     If invalid, it throws:
-InvalidNameException if the name is null or empty.
-InvalidAgeException if the age is not between 18 and 60.
-Getters:
-getName() and getAge() allow access to the student's details.
+      -  InvalidNameException if the name is null or empty.
+      -  InvalidAgeException if the age is not between 18 and 60.
+3. Getters:
+      -  getName() and getAge() allow access to the student's details.
 
 Step 2: 
 The CustomExceptions Class
