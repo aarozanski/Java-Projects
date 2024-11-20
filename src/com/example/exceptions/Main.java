@@ -1,6 +1,4 @@
 package com.example.exceptions;
-
-public class Main {
 import java.util.Scanner;
 
     public class Main {
