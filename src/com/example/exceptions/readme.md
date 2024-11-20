@@ -54,15 +54,15 @@ Key Features:
      -  Unregister a student.
      -  List all students.
      -  Exit the program.
-Exception Handling:
-Ensures that invalid inputs or operations (e.g., invalid name, age, or trying to register more than 5 students) don’t crash the program.
-Uses try-catch blocks to catch exceptions and display appropriate error messages.
-Continued Execution:
-After each operation, the program loops back to the menu, allowing continuous interaction until the user exits.
+2. Exception Handling:
+     -  Ensures that invalid inputs or operations (e.g., invalid name, age, or trying to register more than 5 students) don’t crash the program.
+     -  Uses try-catch blocks to catch exceptions and display appropriate error messages.
+3. Continued Execution:
+     -  After each operation, the program loops back to the menu, allowing continuous interaction until the user exits.
 
 What This Program Teaches
 
-Object-Oriented Design:
+1. Object-Oriented Design:
 Encapsulation: The Student class encapsulates the details of a student and validates the data internally.
 Custom Exceptions: Clear and meaningful error handling for invalid input scenarios.
 Error Handling:
