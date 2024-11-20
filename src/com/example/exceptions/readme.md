@@ -63,15 +63,15 @@ Key Features:
 What This Program Teaches
 
 1. Object-Oriented Design:
-Encapsulation: The Student class encapsulates the details of a student and validates the data internally.
-Custom Exceptions: Clear and meaningful error handling for invalid input scenarios.
-Error Handling:
-Prevents invalid states by throwing exceptions for invalid data or operations.
-Makes the system robust and user-friendly.
-Reusability:
-The Student and CourseRegistration classes can be reused or extended for other applications.
-Scalability:
-Easily extendable to include more features, such as different courses or advanced validation.
+     -  Encapsulation: The Student class encapsulates the details of a student and validates the data internally.
+     -  Custom Exceptions: Clear and meaningful error handling for invalid input scenarios.
+2. Error Handling:
+     -  Prevents invalid states by throwing exceptions for invalid data or operations.
+     -  Makes the system robust and user-friendly.
+3. Reusability:
+     -  The Student and CourseRegistration classes can be reused or extended for other applications.
+4. Scalability:
+     -  Easily extendable to include more features, such as different courses or advanced validation.
 
 How Everything Fits Together
 
