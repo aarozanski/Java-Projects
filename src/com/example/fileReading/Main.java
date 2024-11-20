@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "students.txt"; // Path to the input file
+        String filePath = "src/com/example/students.txt"; // Path to the input file
         ArrayList<Double> scores = new ArrayList<>();
         double totalScore = 0;
 
