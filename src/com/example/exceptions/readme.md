@@ -49,11 +49,11 @@ The Main Class
 This is the entry point of the program where user interactions are handled. It uses a menu-based system to perform actions like registering and unregistering students.
 
 Key Features:
-Menu Options:
-Register a student.
-Unregister a student.
-List all students.
-Exit the program.
+1. Menu Options:
+     -  Register a student.
+     -  Unregister a student.
+     -  List all students.
+     -  Exit the program.
 Exception Handling:
 Ensures that invalid inputs or operations (e.g., invalid name, age, or trying to register more than 5 students) don’t crash the program.
 Uses try-catch blocks to catch exceptions and display appropriate error messages.
