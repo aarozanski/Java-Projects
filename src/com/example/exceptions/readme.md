@@ -19,12 +19,12 @@ The CustomExceptions Class
 This file organizes all the custom exceptions we use to handle specific invalid cases.
 
 Key Features:
-InvalidNameException:
-Thrown when the student's name is null or empty.
-InvalidAgeException:
-Thrown when the student's age is outside the allowed range (18-60).
-CourseFullException:
-Thrown when attempting to register more than 5 students in a course.
+1. InvalidNameException:
+     -  Thrown when the student's name is null or empty.
+2. InvalidAgeException:
+     -  Thrown when the student's age is outside the allowed range (18-60).
+3. CourseFullException:
+     -  Thrown when attempting to register more than 5 students in a course.
 By creating custom exceptions, we ensure that invalid cases are clearly and explicitly handled.
 
 Step 3: 
