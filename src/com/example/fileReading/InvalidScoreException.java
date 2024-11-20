@@ -1,4 +1,8 @@
 package com.example.fileReading;
 
-public class InvalidScoreException {
+// Custom exception for invalid scores
+public class InvalidScoreException extends Exception {
+    public InvalidScoreException(String message) {
+        super(message);
+    }
 }
