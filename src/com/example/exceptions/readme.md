@@ -72,3 +72,16 @@ Reusability:
 The Student and CourseRegistration classes can be reused or extended for other applications.
 Scalability:
 Easily extendable to include more features, such as different courses or advanced validation.
+
+How Everything Fits Together
+
+Student Class:
+Represents individual students.
+Handles validation when creating a new student object.
+CustomExceptions Class:
+Provides clear, readable, and specific error messages for invalid cases.
+CourseRegistration Class:
+Manages the list of students and enforces course rules.
+Main Class:
+Acts as the interface for user interaction.
+Calls methods from other classes to perform tasks.
