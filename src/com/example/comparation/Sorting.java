@@ -1,6 +1,7 @@
 package com.example.comparation;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Sorting {
@@ -14,6 +15,7 @@ public class Sorting {
         list.add(emp3);
 
         System.out.println("Before sorting \n" + list);
+        Collections.sort(list);
     }
 
 }
