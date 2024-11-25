@@ -12,8 +12,9 @@ public class Comparation {
             list.add("Gleb");
             list.add("Bianca");
             list.add("Stepan");
-
+        System.out.println("Before sort: " + list);
         Collections.sort(list);
+        System.out.println("After sort: " + list);
         
     }
 }
