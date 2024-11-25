@@ -7,7 +7,7 @@ import java.util.List;
 public class Sorting {
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
-        Employee emp1 = new Employee(100, "Aika", "Zhumabek", 15000);
+        Employee emp1 = new Employee(99, "Aika", "Zhumabek", 15000);
         Employee emp2 = new Employee(143, "Zaur", "Nagiev", 34000);
         Employee emp3 = new Employee(23, "Zaur", "Berish", 56000);
         list.add(emp1);
@@ -16,11 +16,12 @@ public class Sorting {
 
         System.out.println("Before sorting \n" + list);
         Collections.sort(list);
+        System.out.println("After sorting \n" + list);
     }
 
 }
 
-class Employee {
+class Employee implements Comparable<Employee>{
 
     int id;
     String name;
@@ -42,6 +43,19 @@ class Employee {
                 ", surname='" + surname + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee anotherEmp) {
+        if (this.id == anotherEmp.id ){
+            return 0;
+        }
+        else if(this.id < anotherEmp.id){
+            return -1;
+        }
+        else {
+            return 1;
+        }
     }
 }
 
