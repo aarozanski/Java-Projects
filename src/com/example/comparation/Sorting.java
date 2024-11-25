@@ -1,19 +1,29 @@
 package com.example.comparation;
 
-public class Sorting {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Sorting {
+    public static void main(String[] args) {
+        List<Employee> list = new ArrayList<>();
+        Employee.emp1 = new Employee(100, "Aika", "Zhumabek", 15000);
+        Employee.emp2 = new Employee(143, "Zaur", "Nagiev", 34000);
+        Employee.emp3 = new Employee(23, "Zaur", "Berish", 56000);
+        list.add(emp1);
+        list.add(emp2);
+        list.add(emp3);
+    }
 
 }
 
-
-public class Employee {
+class Employee {
 
     int id;
     String name;
     String surname;
     int salary;
 
-    public Sorting(int id, String name, String surname, int salary) {
+    public Employee(int id, String name, String surname, int salary) {
         this.id = id;
         this.name = name;
         this.surname = surname;
