@@ -6,12 +6,14 @@ import java.util.List;
 public class Sorting {
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
-        Employee.emp1 = new Employee(100, "Aika", "Zhumabek", 15000);
-        Employee.emp2 = new Employee(143, "Zaur", "Nagiev", 34000);
-        Employee.emp3 = new Employee(23, "Zaur", "Berish", 56000);
+        Employee emp1 = new Employee(100, "Aika", "Zhumabek", 15000);
+        Employee emp2 = new Employee(143, "Zaur", "Nagiev", 34000);
+        Employee emp3 = new Employee(23, "Zaur", "Berish", 56000);
         list.add(emp1);
         list.add(emp2);
         list.add(emp3);
+
+        System.out.println("Before sorting \n" + list);
     }
 
 }
