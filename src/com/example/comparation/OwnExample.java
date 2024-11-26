@@ -1,6 +1,7 @@
 package com.example.comparation;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class OwnExample {
@@ -19,10 +20,13 @@ public class OwnExample {
         resturant.add(rest4);
         resturant.add(rest5);
         System.out.println("Before sorting \n" + resturant);
+
+        Collections.sort(resturant);
+        System.out.println("After sorting \n" + resturant);
     }
 }
 
-class Resturant {
+class Resturant implements Comparable <Resturant>{
     String name;
     int ratingStar;
     int numOfYears;
@@ -40,5 +44,10 @@ class Resturant {
         this.name = name;
         this.ratingStar = ratingStar;
         this.numOfYears = numOfYears;
+    }
+
+    @Override
+    public int compareTo(Resturant anotherRest) {
+        return this.ratingStar-anotherRest.ratingStar;
     }
 }
