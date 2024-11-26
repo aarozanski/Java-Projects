@@ -7,49 +7,54 @@ import java.util.List;
 public class OwnExample {
     public static void main(String[] args) {
 
-        List <Resturant> resturant = new ArrayList<>();
-        Resturant rest1 = new Resturant("Tzuco", 5, 7);
-        Resturant rest2 = new Resturant("RPM", 4, 5);
-        Resturant rest3 = new Resturant("Ema", 3, 6);
-        Resturant rest4 = new Resturant("Aba", 4, 6);
-        Resturant rest5 = new Resturant("Nico", 2, 4);
+        List<Restaurant> restaurant = new ArrayList<>();
+        Restaurant rest1 = new Restaurant("Tzuco", 5, 7);
+        Restaurant rest2 = new Restaurant("RPM", 4, 5);
+        Restaurant rest3 = new Restaurant("Ema", 3, 6);
+        Restaurant rest4 = new Restaurant("Aba", 4, 6);
+        Restaurant rest5 = new Restaurant("Nico", 2, 4);
 
-        resturant.add(rest1);
-        resturant.add(rest2);
-        resturant.add(rest3);
-        resturant.add(rest4);
-        resturant.add(rest5);
-        System.out.println("Before sorting \n" + resturant);
+        restaurant.add(rest1);
+        restaurant.add(rest2);
+        restaurant.add(rest3);
+        restaurant.add(rest4);
+        restaurant.add(rest5);
 
-        Collections.sort(resturant);
-        System.out.println("After sorting \n" + resturant);
+        System.out.println("Before sorting \n" + restaurant);
+
+        Collections.sort(restaurant);
+        System.out.println("After sorting \n" + restaurant);
     }
 }
 
-class Resturant implements Comparable <Resturant>{
+class Restaurant implements Comparable<Restaurant> {
     String name;
     int ratingStar;
     int numOfYears;
 
     @Override
     public String toString() {
-        return "Resturant{" +
+        return "Restaurant{" +
                 "name='" + name + '\'' +
                 ", ratingStar=" + ratingStar +
                 ", numOfYears=" + numOfYears +
                 '}';
     }
 
-    public Resturant(String name, int ratingStar, int numOfYears) {
+    public Restaurant(String name, int ratingStar, int numOfYears) {
         this.name = name;
         this.ratingStar = ratingStar;
         this.numOfYears = numOfYears;
     }
 
     @Override
-    public int compareTo(Resturant anotherRest) {
-    return this.ratingStar-anotherRest.ratingStar;
-       // return this.ratingStar.compareTo(anotherRest.ratingStar); with Integer ratingStar
-
+    public int compareTo(Restaurant anotherRest) {
+        // First compare by ratingStar, descending
+        int ratingCompare = Integer.compare(anotherRest.ratingStar, this.ratingStar);
+        if (ratingCompare != 0) {
+            return ratingCompare;
+        }
+        // If ratings are the same, compare by numOfYears, descending
+        return Integer.compare(anotherRest.numOfYears, this.numOfYears);
     }
 }
