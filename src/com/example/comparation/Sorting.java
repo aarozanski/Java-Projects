@@ -25,7 +25,7 @@ public class Sorting {
 
 class Employee implements Comparable<Employee>{
 
-    int id;
+    Integer id;
     String name;
     String surname;
     int salary;
