@@ -28,7 +28,7 @@ public class OwnExample {
 
 class Resturant implements Comparable <Resturant>{
     String name;
-    Integer ratingStar;
+    int ratingStar;
     int numOfYears;
 
     @Override
@@ -48,11 +48,8 @@ class Resturant implements Comparable <Resturant>{
 
     @Override
     public int compareTo(Resturant anotherRest) {
-       if ( ratingStar > anotherRest.ratingStar){
-           return this.ratingStar.compareTo(anotherRest.ratingStar);
-       }
+    return this.ratingStar-anotherRest.ratingStar;
        // return this.ratingStar.compareTo(anotherRest.ratingStar); with Integer ratingStar
 
-        return 0;
     }
 }
