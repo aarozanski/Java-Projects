@@ -60,7 +60,10 @@ class Employee implements Comparable<Employee>{
 //        }
 //        return this.id-anotherEmp.id;
 //        return this.id.compareTo(anotherEmp.id); - if we had Integer id instead of int id;
-        return this.name.compareTo(anotherEmp.name);
+        int res = return this.name.compareTo(anotherEmp.name);
+        if ( res == 0){
+            return  this.surname.compareTo(anotherEmp.surname);
+        }
     }
 }
 
