@@ -25,7 +25,7 @@ public class Sorting {
 
 class Employee implements Comparable<Employee>{
 
-    Integer id;
+    int id;
     String name;
     String surname;
     int salary;
@@ -59,7 +59,8 @@ class Employee implements Comparable<Employee>{
 //            return 1;
 //        }
 //        return this.id-anotherEmp.id;
-        return this.id.compareTo(anotherEmp.id);
+//        return this.id.compareTo(anotherEmp.id); - if we had Integer id instead of int id;
+        return.this.name.compareTo(anotherEmp.name);
     }
 }
 
