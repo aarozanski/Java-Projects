@@ -8,8 +8,8 @@ import java.util.List;
 public class Sorting {
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
-        Employee emp1 = new Employee(99, "Aika", "Zhumabek", 15000);
-        Employee emp2 = new Employee(143, "Zaur", "Nagiev", 34000);
+        Employee emp1 = new Employee(99, "Kerim", "Zhumabek", 15000);
+        Employee emp2 = new Employee(143, "Arman", "Nagiev", 34000);
         Employee emp3 = new Employee(23, "Zaur", "Berish", 56000);
         Arrays.sort(new Employee [] {emp1, emp2, emp3});
         list.add(emp1);
@@ -60,7 +60,7 @@ class Employee implements Comparable<Employee>{
 //        }
 //        return this.id-anotherEmp.id;
 //        return this.id.compareTo(anotherEmp.id); - if we had Integer id instead of int id;
-        return.this.name.compareTo(anotherEmp.name);
+        return this.name.compareTo(anotherEmp.name);
     }
 }
 
