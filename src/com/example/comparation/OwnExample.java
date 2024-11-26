@@ -48,10 +48,6 @@ class Resturant implements Comparable <Resturant>{
 
     @Override
     public int compareTo(Resturant anotherRest) {
-        int res = this.ratingStar;
-        if (res == 0){
-            res = this.numOfYears;
-        }
-        return res;
+        return this.ratingStar-anotherRest.ratingStar;
     }
 }
