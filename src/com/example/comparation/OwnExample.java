@@ -12,6 +12,12 @@ public class OwnExample {
         Resturant rest3 = new Resturant("Ema", 3, 6);
         Resturant rest4 = new Resturant("Aba", 4, 6);
         Resturant rest5 = new Resturant("Nico", 2, 4);
+
+        resturant.add(rest1);
+        resturant.add(rest2);
+        resturant.add(rest3);
+        resturant.add(rest4);
+        resturant.add(rest5);
         System.out.println("Before sorting \n" + resturant);
     }
 }

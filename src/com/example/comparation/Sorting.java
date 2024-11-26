@@ -11,7 +11,7 @@ public class Sorting {
         Employee emp1 = new Employee(99, "Arman", "Zhumabek", 15000);
         Employee emp2 = new Employee(143, "Arman", "Nagiev", 34000);
         Employee emp3 = new Employee(23, "Zaur", "Berish", 56000);
-        Arrays.sort(new Employee [] {emp1, emp2, emp3});
+        //Arrays.sort(new Employee [] {emp1, emp2, emp3});
         list.add(emp1);
         list.add(emp2);
         list.add(emp3);
