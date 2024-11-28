@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Comparator {
+public abstract class Comparator {
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
         Employee emp1 = new Employee(99, "Arman", "Zhumabek", 15000);
@@ -19,6 +19,8 @@ public class Comparator {
         Collections.sort(list);
         System.out.println("After sorting \n" + list);
     }
+
+    public abstract int compare(Employee emp1, Employee emp2);
 }
 
 class Comparator2 extends Comparator {
@@ -46,6 +48,14 @@ class Comparator2 extends Comparator {
 
     @Override
     public int compare(Employee emp1, Employee emp2) {
-        return 0;
+        if (emp1.id == emp2.id ){
+            return 0;
+        }
+        else if(emp1.id < emp2.id){
+            return -1;
+        }
+        else {
+            return 1;
+        }
     }
 }
