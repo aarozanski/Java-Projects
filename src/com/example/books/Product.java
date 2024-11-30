@@ -11,6 +11,10 @@ public class Product<T> {
         this.details = details;
     }
 
+    public Product() {
+
+    }
+
     public String getName() {
         return name;
     }

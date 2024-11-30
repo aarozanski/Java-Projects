@@ -10,6 +10,10 @@ public class Clothes extends Product<Object> {
         this.material = material;
     }
 
+    public Clothes(String name, double price, Object details) {
+        super(name, price, details);
+    }
+
     @Override
     public String toString() {
         return "Clothes{" +
