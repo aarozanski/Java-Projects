@@ -1,6 +1,6 @@
 package com.example.books;
 
-public class Electronics {
+public class Electronics extends Product<Object> {
     private String brand;
     private int warranty; // in years
 

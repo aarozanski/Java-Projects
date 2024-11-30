@@ -1,10 +1,11 @@
 package com.example.books;
 
-public class Clothes {
+public class Clothes extends Product<Object> {
     private String size;
     private String material;
 
     public Clothes(String size, String material) {
+        super();
         this.size = size;
         this.material = material;
     }

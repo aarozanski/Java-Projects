@@ -13,9 +13,9 @@ public class Main {
         Inventory<Clothes> clothesInventory = new Inventory<>();
 
         // Add products to each inventory
-        bookInventory.addProduct(new Product<>("Harry Potter", 19.99, book));
-        electronicInventory.addProduct(new Product<>("TV", 299.99, electronic));
-        clothesInventory.addProduct(new Product<>("T-Shirt", 29.99, clothes));
+        bookInventory.addProduct(new Product<>("Harry Potter", 19.99, book).getDetails());
+        electronicInventory.addProduct(new Product<>("TV", 299.99, electronic).getDetails());
+        clothesInventory.addProduct(new Product<>("T-Shirt", 29.99, clothes).getDetails());
 
         // Display contents using generic methods
         System.out.println("Books Inventory:");
