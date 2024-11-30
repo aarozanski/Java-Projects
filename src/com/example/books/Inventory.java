@@ -3,19 +3,19 @@ package com.example.books;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Inventory<T> {
-    private List<Product<T>> products = new ArrayList<>();
+public class Inventory<T extends Product<?>> {
+    private List<T> products = new ArrayList<>();
 
-    public void addProduct(Product<T> product) {
+    public void addProduct(T product) {
         products.add(product);
     }
 
-    public void removeProduct(Product<T> product) {
+    public void removeProduct(T product) {
         products.remove(product);
     }
 
     public void displayAllProducts() {
-        for (Product<T> product : products) {
+        for (T product : products) {
             System.out.println(product);
         }
     }
