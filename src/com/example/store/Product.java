@@ -1,4 +1,4 @@
-package com.example.books;
+package com.example.store;
 
 public class Product<T> {
     private String name;

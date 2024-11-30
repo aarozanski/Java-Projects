@@ -1,4 +1,4 @@
-package com.example.books;
+package com.example.store;
 import java.util.ArrayList;
 import java.util.List;
 
