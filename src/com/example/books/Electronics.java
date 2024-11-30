@@ -1,8 +1,8 @@
 package com.example.books;
 
-public class Electronics extends Product<Object> {
+public class Electronics {
     private String brand;
-    private int warranty; // in years
+    private int warranty;
 
     public Electronics(String brand, int warranty) {
         this.brand = brand;

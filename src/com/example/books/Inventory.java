@@ -1,23 +1,23 @@
 package com.example.books;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Inventory<T extends Product<?>> {
-    private List<T> products = new ArrayList<>();
+public class Inventory<T> {
+    private List<Product<T>> products = new ArrayList<>();
 
-    public void addProduct(T product) {
+    public void addProduct(Product<T> product) {
         products.add(product);
     }
 
-    public void removeProduct(T product) {
+    public void removeProduct(Product<T> product) {
         products.remove(product);
     }
 
     public void displayAllProducts() {
-        for (T product : products) {
+        for (Product<T> product : products) {
             System.out.println(product);
         }
     }
 }
+
 
