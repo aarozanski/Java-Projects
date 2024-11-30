@@ -1,44 +1,41 @@
 package com.example.genericSort;
-
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main {
-    public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(5);
-        numbers.add(3);
-        numbers.add(9);
-        numbers.add(1);
-        numbers.add(4);
+public class GenericSorting {
 
-        System.out.println("Original list: " + numbers);
-        GenericSorting.sort(numbers, Comparator.naturalOrder());
-        System.out.println("Sorted list: " + numbers);
+    public static <T> void sort(List<T> list, Comparator<T> comparator) {
 
-        // Example with custom objects
-        List<Person> people = new ArrayList<>();
-        people.add(new Person("Alice", 30));
-        people.add(new Person("Bob", 25));
-        people.add(new Person("Carol", 35));
-
-        System.out.println("\nOriginal list of people:");
-        people.forEach(person -> System.out.println(person.name + " - " + person.age));
-
-        GenericSorting.sort(people, Comparator.comparingInt(person -> person.age));
-
-        System.out.println("Sorted list of people by age:");
-        people.forEach(person -> System.out.println(person.name + " - " + person.age));
+        if (list == null || list.isEmpty()) {
+            return; // Handle empty lists
+        }
+        // Choose a suitable sorting algorithm (e.g., quicksort)
+        quickSort(list, 0, list.size() - 1, comparator);
+    }
+    private static <T> void quickSort(List<T> list, int low, int high, Comparator<T> comparator) {
+        if (low < high) {
+            int pivotIndex = partition(list, low, high, comparator);
+            quickSort(list, low, pivotIndex - 1, comparator);
+            quickSort(list, pivotIndex + 1, high, comparator);
+        }
+    }
+    private static <T> int partition(List<T> list, int low, int high, Comparator<T> comparator) {
+        T pivot = list.get(high);
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (comparator.compare(list.get(j), pivot) <= 0) {
+                i++;
+                swap(list, i, j);
+            }
+        }
+        swap(list, i + 1, high);
+        return i + 1;
+    }
+    private static <T> void swap(List<T> list, int i, int j) {
+        T temp = list.get(i);
+        list.set(i, list.get(j));
+        list.set(j, temp);
     }
 }
 
-class Person {
-    String name;
-    int age;
 
-    Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-}
