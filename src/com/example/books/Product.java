@@ -11,10 +11,6 @@ public class Product<T> {
         this.details = details;
     }
 
-    public Product() {
-
-    }
-
     public String getName() {
         return name;
     }
@@ -35,6 +31,6 @@ public class Product<T> {
                 ", details=" + details +
                 '}';
     }
-
 }
+
 

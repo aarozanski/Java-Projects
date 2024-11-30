@@ -1,6 +1,6 @@
 package com.example.books;
 
-public class Book extends Product<Object> {
+public class Book {
     private String author;
     private int pages;
 
@@ -17,4 +17,5 @@ public class Book extends Product<Object> {
                 '}';
     }
 }
+
 
