@@ -22,7 +22,7 @@ public class PrimeChecker {
     public static boolean isPrime(int num) {
         // Prime numbers are greater than 1, so return false if num is less than 2
         if (num < 2) {
-            return false;
+            return false; // Not prime by definition
         }
 
         // Check for divisors from 2 up to half of num
