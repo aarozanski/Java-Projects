@@ -3,7 +3,7 @@ package com.example.homework_1;
 public class PrimeChecker {
     public static void main(String[] args) {
         // Example number to check for primality
-        int number = -9;
+        int number = 30;
 
         // Calling the isPrime method to determine if the number is prime
         if (isPrime(number)) {
