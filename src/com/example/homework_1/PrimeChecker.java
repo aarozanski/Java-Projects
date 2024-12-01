@@ -2,7 +2,7 @@ package com.example.homework_1;
 
 public class PrimeChecker {
     public static void main(String[] args) {
-        int number = 29;
+        int number = 70;
         if (isPrime(number)) {
             System.out.println(number + " is a prime number.");
         } else {
