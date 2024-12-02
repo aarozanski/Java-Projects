@@ -6,53 +6,56 @@ import java.util.List;
 
 public class ToDoManager {
 
-    // Method to save tasks to file
-    public static void saveTasksToFile(String filePath, List<ToDo> tasks) throws IOException {
+    public static void saveTasksToFile(String filePath, List<ToDo> tasks) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (ToDo task : tasks) {
                 writer.write(task.toString());
                 writer.newLine();
             }
+        } catch (IOException e) {
+            System.err.println("Error writing to file: " + e.getMessage());
         }
     }
 
-    // Method to load tasks from file
-    public static List<ToDo> loadTasksFromFile(String filePath) throws IOException {
+    public static List<ToDo> loadTasksFromFile(String filePath) {
         List<ToDo> tasks = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length == 3) {
-                    ToDo task = new ToDo(Integer.parseInt(parts[0]), parts[1], Boolean.parseBoolean(parts[2]));
-                    tasks.add(task);
+                    int id = Integer.parseInt(parts[0].trim());
+                    String task = parts[1];
+                    boolean isComplete = Boolean.parseBoolean(parts[2].trim());
+                    tasks.add(new ToDo(id, task, isComplete));
                 }
             }
+        } catch (IOException e) {
+            System.err.println("Error reading from file: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.err.println("Error parsing a number: " + e.getMessage());
         }
         return tasks;
     }
 
-    // Method to mark a task as complete
-    public static void markTaskAsComplete(int id, String filePath) throws IOException {
+    public static void markTaskAsComplete(int id, String filePath) {
         List<ToDo> tasks = loadTasksFromFile(filePath);
-        for (ToDo task : tasks) {
+        tasks.forEach(task -> {
             if (task.getId() == id) {
                 task.setComplete(true);
-                break;
             }
-        }
+        });
         saveTasksToFile(filePath, tasks);
     }
 
-    // Method to display tasks
     public static void displayTasks(List<ToDo> tasks) {
-        for (ToDo task : tasks) {
-            System.out.println("ID: " + task.getId() + ", Task: " + task.getTask() + ", Complete: " + task.isComplete());
-        }
+        tasks.forEach(task ->
+                System.out.println("ID: " + task.getId() + ", Task: " + task.getTask() + ", Complete: " + task.isComplete())
+        );
     }
 
     public static void main(String[] args) {
-        String filePath = "src/com/example/tasks.txt";
+        String filePath = "tasks.txt";
         List<ToDo> tasks = new ArrayList<>();
 
         // Creating sample tasks
@@ -60,23 +63,18 @@ public class ToDoManager {
         tasks.add(new ToDo(2, "Finish homework", false));
         tasks.add(new ToDo(3, "Call the bank", true));
 
-        try {
-            // Saving tasks to file
-            saveTasksToFile(filePath, tasks);
+        saveTasksToFile(filePath, tasks);
 
-            // Loading and displaying tasks
-            List<ToDo> loadedTasks = loadTasksFromFile(filePath);
-            displayTasks(loadedTasks);
+        List<ToDo> loadedTasks = loadTasksFromFile(filePath);
+        System.out.println("Tasks loaded from file:");
+        displayTasks(loadedTasks);
 
-            // Mark a task as complete and update file
-            markTaskAsComplete(2, filePath);
-            loadedTasks = loadTasksFromFile(filePath);
-            System.out.println("After marking task 2 as complete:");
-            displayTasks(loadedTasks);
+        markTaskAsComplete(2, filePath);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        loadedTasks = loadTasksFromFile(filePath);
+        System.out.println("After marking task 2 as complete:");
+        displayTasks(loadedTasks);
     }
 }
+
 

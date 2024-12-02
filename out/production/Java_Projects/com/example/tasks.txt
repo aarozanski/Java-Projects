@@ -1,1 +1,3 @@
-
+ToDo{id=1, task='Buy groceries', isComplete=false}
+ToDo{id=2, task='Finish homework', isComplete=false}
+ToDo{id=3, task='Call the bank', isComplete=true}
