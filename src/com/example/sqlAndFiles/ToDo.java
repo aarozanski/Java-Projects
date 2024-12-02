@@ -1,6 +1,8 @@
 package com.example.sqlAndFiles;
 
-public class ToDo {
+import java.io.Serializable;
+
+public class ToDo implements Serializable {
 
     int id;
     String task;
