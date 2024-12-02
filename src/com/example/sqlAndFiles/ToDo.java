@@ -1,7 +1,10 @@
 package com.example.sqlAndFiles;
 
 import java.io.Serializable;
-
+/**
+ * The ToDo class represents a single task in a to-do list.
+ * It implements Serializable to allow tasks to be saved to and read from a file.
+ */
 public class ToDo implements Serializable {
 
     int id;
