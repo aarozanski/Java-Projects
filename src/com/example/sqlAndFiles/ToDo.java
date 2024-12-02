@@ -44,10 +44,7 @@ public class ToDo implements Serializable {
 
     @Override
     public String toString() {
-        return "ToDo{" +
-                "id=" + id +
-                ", task='" + task + '\'' +
-                ", isComplete=" + isComplete +
-                '}';
+        return id + "," + task + "," + isComplete;
     }
+
 }
