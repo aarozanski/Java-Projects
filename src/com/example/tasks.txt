@@ -1,0 +1,20 @@
+1,Buy groceries,false
+2,Finish homework,false
+3,Call the bank,true
+4,Pay utility bills,false
+5,Update website content,true
+6,Meet with project team,false
+7,Organize office desk,true
+8,Read a book chapter,false
+9,Plan weekend getaway,false
+10,Write thank you notes,true
+11,Attend yoga class,true
+12,Prepare project report,false
+13,Review insurance policies,true
+14,Clean kitchen,true
+15,Study for final exam,false
+16,Make a doctor's appointment,false
+17,Backup computer data,true
+18,Cook dinner for family,false
+19,Check car oil level,true
+20,Arrange playdate for kids,false
