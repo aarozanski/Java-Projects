@@ -1,4 +1,4 @@
-package com.example.week_1;
+package com.example.isPrime_Fibonacci;
 
 import java.util.Scanner;
 
