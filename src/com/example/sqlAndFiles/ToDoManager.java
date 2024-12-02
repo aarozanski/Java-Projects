@@ -52,7 +52,7 @@ public class ToDoManager {
     }
 
     public static void main(String[] args) {
-        String filePath = "tasks.txt";
+        String filePath = "src/com/example/tasks.txt";
         List<ToDo> tasks = new ArrayList<>();
 
         // Creating sample tasks
