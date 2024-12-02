@@ -11,11 +11,11 @@ public class ToDo implements Serializable {
     String task;
     boolean isComplete;
 
-// constructor for this class
+// constructor for this class. Initializes a new instance of a ToDo object
     public ToDo(int id, String task, boolean isComplete) {
-        this.id = id;
-        this.task = task;
-        this.isComplete = isComplete;
+        this.id = id;            // Set the task ID
+        this.task = task;        // Set the task description
+        this.isComplete = isComplete; // Set the task completion status
     }
 
     public int getId() {
