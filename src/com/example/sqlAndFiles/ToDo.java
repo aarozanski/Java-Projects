@@ -17,11 +17,11 @@ public class ToDo implements Serializable {
         this.task = task;        // Set the task description
         this.isComplete = isComplete; // Set the task completion status
     }
-
+  // returns the ID
     public int getId() {
         return id;
     }
-
+  // sets the ID
     public void setId(int id) {
         this.id = id;
     }
