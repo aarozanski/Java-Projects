@@ -6,11 +6,12 @@ import java.io.Serializable;
  * It implements Serializable to allow tasks to be saved to and read from a file.
  */
 public class ToDo implements Serializable {
-
+// properties of this class
     int id;
     String task;
     boolean isComplete;
 
+// constructor for this class
     public ToDo(int id, String task, boolean isComplete) {
         this.id = id;
         this.task = task;
