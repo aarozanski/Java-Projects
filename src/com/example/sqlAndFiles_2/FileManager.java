@@ -39,7 +39,6 @@ public class FileManager {
             System.out.println("ID: " + student.getId() + ", Name: " + student.getName() + ", Grade: " + student.getGrade());
         }
     }
-
     // Update a student's grade by their ID
     public static void updateGrade(int id, double newGrade, String filePath) throws IOException {
         List<Student> students = loadStudentsFromFile(filePath);
