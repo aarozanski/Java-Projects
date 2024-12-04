@@ -1,5 +1,7 @@
 package com.example.genericsExample;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,5 +14,9 @@ public class Main {
         Printer<String> stringPrinter = new Printer<>("Hello");
         stringPrinter.print();
 
+        ArrayList<Object> cats = new ArrayList<>();
+        cats.add(new Cat());
+
+        Cat myCat = cats.get(0);
     }
 }
