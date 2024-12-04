@@ -6,7 +6,7 @@ public class Main {
         Printer<Integer> printer = new Printer<>(67);
         printer.print();
 
-        Printer<String> stringPrinter = new Printer<>("hello");
+        Printer<Double> doublePrinter = new Printer<>(99.9);
         printer.print();
 
     }
