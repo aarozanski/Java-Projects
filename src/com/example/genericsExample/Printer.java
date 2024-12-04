@@ -1,9 +1,9 @@
 package com.example.genericsExample;
 
-public class IntegerPrinter {
-    Integer thingsToPrint;
+public class Printer<T> {
+    T thingsToPrint;
 
-    public IntegerPrinter(Integer thingsToPrint) {
+    public Printer(T thingsToPrint) {
         this.thingsToPrint = thingsToPrint;
     }
 
