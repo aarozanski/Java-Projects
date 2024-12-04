@@ -1,7 +1,13 @@
 package com.example.genericsExample;
 
-public class genericsExercise {
-    public static void main(String[] args) {
-        
+public class IntegerPrinter {
+    Integer thingsToPrint;
+
+    public IntegerPrinter(Integer thingsToPrint) {
+        this.thingsToPrint = thingsToPrint;
+    }
+
+    public void print(){
+        System.out.println(thingsToPrint);
     }
 }
