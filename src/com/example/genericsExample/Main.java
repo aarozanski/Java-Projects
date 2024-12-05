@@ -13,10 +13,6 @@ public class Main {
 
         Printer<String> stringPrinter = new Printer<>("Hello");
         stringPrinter.print();
-
-        ArrayList<Object> cats = new ArrayList<>();
-        cats.add(new Cat());
-
-        Cat myCat = cats.get(0);
+        
     }
 }
