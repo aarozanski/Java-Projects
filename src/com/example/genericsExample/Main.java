@@ -13,6 +13,6 @@ public class Main {
 
         Printer<String> stringPrinter = new Printer<>("Hello");
         stringPrinter.print();
-        
+
     }
 }
