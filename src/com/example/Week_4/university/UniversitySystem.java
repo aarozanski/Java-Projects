@@ -1,4 +1,4 @@
-package com.example.university;
+package com.example.Week_4.university;
 
 /**
  * The Main class is used to run the application and demonstrate the university system.

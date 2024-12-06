@@ -1,4 +1,4 @@
-package com.example.shapes;
+package com.example.Week_4.shapes;
 
 // Square class extends Rectangle
 public class Square extends Rectangle {

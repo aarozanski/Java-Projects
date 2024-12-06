@@ -1,4 +1,4 @@
-package com.example.university;
+package com.example.Week_4.university;
 
 public abstract class Professor {
     private String name; // Store the name of the professor

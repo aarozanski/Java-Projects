@@ -1,4 +1,4 @@
-package com.example.shapes_2;
+package com.example.Week_4.shapes_2;
 
 // Interface for drawable shapes
 public interface Drawable {

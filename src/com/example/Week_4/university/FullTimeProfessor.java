@@ -1,4 +1,4 @@
-package com.example.university;
+package com.example.Week_4.university;
 
 public class FullTimeProfessor extends ProfessorAbstract {
     // Constructor that passes the name to the superclass
