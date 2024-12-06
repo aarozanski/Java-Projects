@@ -1,4 +1,4 @@
-package com.example.store;
+package com.example.week_7.store;
 import java.util.ArrayList;
 import java.util.List;
 

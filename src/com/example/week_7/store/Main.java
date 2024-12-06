@@ -1,4 +1,4 @@
-package com.example.store;
+package com.example.week_7.store;
 
 public class Main {
     public static void main(String[] args) {
