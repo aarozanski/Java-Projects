@@ -1,4 +1,4 @@
-package com.example.school.management;
+package com.example.Week_2.management;
 
 public class Person {
     // Declare the fields of the class as private

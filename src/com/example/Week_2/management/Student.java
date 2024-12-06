@@ -1,4 +1,4 @@
-package com.example.school.management;
+package com.example.Week_2.management;
 
 import java.util.ArrayList;
 import java.util.List;

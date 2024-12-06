@@ -1,4 +1,4 @@
-package com.example.contact.management;
+package com.example.Week_3.libraryManagement.management;
 // This class represents a single contact with a name, phone number, and email.
 class Contact {
     // Private variables to store contact information

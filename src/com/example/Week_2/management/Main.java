@@ -1,4 +1,4 @@
-package com.example.school.management;
+package com.example.Week_2.management;
 
 public class Main {
     public static void main(String[] args) {

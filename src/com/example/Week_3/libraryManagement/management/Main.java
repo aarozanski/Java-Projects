@@ -1,4 +1,4 @@
-package com.example.contact.management;
+package com.example.Week_3.libraryManagement.management;
 
 import java.util.Scanner;    // Import Scanner for reading user input
 

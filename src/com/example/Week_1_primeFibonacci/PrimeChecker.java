@@ -1,4 +1,4 @@
-package com.example.isPrime_Fibonacci;
+package com.example.Week_1_primeFibonacci;
 
 public class PrimeChecker {
     public static void main(String[] args) {
