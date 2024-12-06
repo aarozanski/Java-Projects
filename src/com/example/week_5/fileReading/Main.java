@@ -1,4 +1,4 @@
-package com.example.Week_5.fileReading;
+package com.example.week_5.fileReading;
 
 import java.io.*;
 import java.util.ArrayList;

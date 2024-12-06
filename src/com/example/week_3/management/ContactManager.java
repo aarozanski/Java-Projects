@@ -1,4 +1,4 @@
-package com.example.Week_3.management;
+package com.example.week_3.management;
 
 import java.util.ArrayList;   // Imports ArrayList for storing multiple contacts
 import java.util.HashMap;     // Imports HashMap for quick lookups by name

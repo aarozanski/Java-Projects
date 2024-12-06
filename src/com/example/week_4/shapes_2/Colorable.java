@@ -1,4 +1,4 @@
-package com.example.Week_4.shapes_2;
+package com.example.week_4.shapes_2;
 
 // Interface for colorable shapes
 public interface Colorable {

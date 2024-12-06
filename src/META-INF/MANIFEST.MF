@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: com.example.Week_1.primeFibonacci.Fibonacci
+Main-Class: com.example.week_1.Fibonacci
 

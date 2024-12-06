@@ -1,4 +1,4 @@
-package com.example.Week_4.shapes;
+package com.example.week_4.shapes;
 
 // Circle class extends Shape
 public class Circle extends Shape {

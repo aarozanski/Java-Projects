@@ -1,4 +1,4 @@
-package com.example.Week_5.fileReading;
+package com.example.week_5.fileReading;
 
 // Custom exception for invalid scores
 public class InvalidScoreException extends Exception {

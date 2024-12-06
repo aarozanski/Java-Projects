@@ -1,4 +1,4 @@
-package com.example.Week_4.shapes_2;
+package com.example.week_4.shapes_2;
 
 // Circle class extends Shape and implements Drawable and Colorable
 public class Circle extends Shape implements Drawable, Colorable {

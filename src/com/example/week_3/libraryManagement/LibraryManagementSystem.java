@@ -1,4 +1,4 @@
-package com.example.Week_3.libraryManagement;
+package com.example.week_3.libraryManagement;
 
 import java.util.*;
 

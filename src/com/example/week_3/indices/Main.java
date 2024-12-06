@@ -1,4 +1,4 @@
-package com.example.Week_3.indices;
+package com.example.week_3.indices;
 
 import java.util.HashMap;
 

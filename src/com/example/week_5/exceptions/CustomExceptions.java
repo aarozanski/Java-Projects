@@ -1,4 +1,4 @@
-package com.example.Week_5.exceptions;
+package com.example.week_5.exceptions;
 
 public class CustomExceptions {
 

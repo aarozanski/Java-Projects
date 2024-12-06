@@ -1,4 +1,4 @@
-package com.example.sqlAndFiles_2;
+package com.example.week_7.sqlAndFiles_2;
 
 import java.io.*;
 import java.util.ArrayList;
