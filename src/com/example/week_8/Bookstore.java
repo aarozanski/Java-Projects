@@ -16,22 +16,40 @@ class Bookstore {
     }
     // Method to add a book
 // Method to add a book
+// Method to add a book
     public void addBook(String title, String author, double price) {
-        String sql = "INSERT INTO books (title, author, price) " +
-                "VALUES (?, ?, ?)";  // Concatenate the string correctly
+        // SQL query to check if the book already exists
+        String checkSql = "SELECT COUNT(*) FROM books WHERE title = ? AND author = ?";
+        String insertSql = "INSERT INTO books (title, author, price) VALUES (?, ?, ?)";
+
         try (Connection conn = connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, title);
-            pstmt.setString(2, author);
-            pstmt.setDouble(3, price);
-            int rowsInserted = pstmt.executeUpdate();
-            if (rowsInserted > 0) {
-                System.out.println("A new book was inserted successfully!");
+             PreparedStatement checkStmt = conn.prepareStatement(checkSql);
+             PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+
+            // Set parameters for the check statement
+            checkStmt.setString(1, title);
+            checkStmt.setString(2, author);
+            ResultSet rs = checkStmt.executeQuery();
+
+            // Check if the book exists
+            if (rs.next() && rs.getInt(1) == 0) {
+                // Book does not exist, proceed with insertion
+                insertStmt.setString(1, title);
+                insertStmt.setString(2, author);
+                insertStmt.setDouble(3, price);
+                int rowsInserted = insertStmt.executeUpdate();
+                if (rowsInserted > 0) {
+                    System.out.println("A new book was inserted successfully!");
+                }
+            } else {
+                // Book already exists
+                System.out.println("Error: A book with the same title and author already exists.");
             }
         } catch (SQLException e) {
             System.out.println("Error inserting book: " + e.getMessage());
         }
     }
+
 
     // Method to retrieve all books
     public void getAllBooks() {
