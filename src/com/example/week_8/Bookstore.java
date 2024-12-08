@@ -15,9 +15,10 @@ class Bookstore {
         return DriverManager.getConnection(URL);
     }
     // Method to add a book
+// Method to add a book
     public void addBook(String title, String author, double price) {
-        String sql = "INSERT INTO books (title, author, price)
-        VALUES (?, ?, ?)";
+        String sql = "INSERT INTO books (title, author, price) " +
+                "VALUES (?, ?, ?)";  // Concatenate the string correctly
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, title);
@@ -31,6 +32,7 @@ class Bookstore {
             System.out.println("Error inserting book: " + e.getMessage());
         }
     }
+
     // Method to retrieve all books
     public void getAllBooks() {
         String sql = "SELECT * FROM books";
