@@ -6,7 +6,7 @@ class Bookstore {
     public static void main(String[] args) {
         Bookstore app = new Bookstore();
 // Add a new book
-        app.addBook("Effective Java", "Joshua Bloch", 39.99);
+        app.addBook("Effective Java 1", "Joshua Bloch", 38.99);
 // Retrieve all books
         app.getAllBooks();
     }
@@ -46,10 +46,13 @@ class Bookstore {
                 System.out.println("Error: A book with the same title and author already exists.");
             }
         } catch (SQLException e) {
-            System.out.println("Error inserting book: " + e.getMessage());
+            if (e.getMessage().contains("UNIQUE constraint failed")) {
+                System.out.println("Error inserting book: A book with the same title and author already exists.");
+            } else {
+                System.out.println("Error inserting book: " + e.getMessage());
+            }
         }
     }
-
 
     // Method to retrieve all books
     public void getAllBooks() {
