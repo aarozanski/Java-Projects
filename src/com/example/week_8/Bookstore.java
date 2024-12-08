@@ -2,8 +2,7 @@ package com.example.week_8;
 import java.sql.*;
 
 class Bookstore {
-    private static final String URL =
-            "jdbc:sqlite:C:/Users/kalas/sql/example.db";
+    private static final String URL = "jdbc:sqlite:/Users/aidarozanski/Documents/jdbc_hw/books.db";
     public static void main(String[] args) {
         Bookstore app = new Bookstore();
 // Add a new book
