@@ -26,8 +26,7 @@ class Bookstore {
             pstmt.setDouble(3, price);
             int rowsInserted = pstmt.executeUpdate();
             if (rowsInserted > 0) {
-                System.out.println("A new book was inserted
-                        successfully!");
+                System.out.println("A new book was inserted successfully!");
             }
         } catch (SQLException e) {
             System.out.println("Error inserting book: " +
