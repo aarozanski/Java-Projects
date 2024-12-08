@@ -14,8 +14,6 @@ class Bookstore {
     private Connection connect() throws SQLException {
         return DriverManager.getConnection(URL);
     }
-    // Method to add a book
-// Method to add a book
 // Method to add a book
     public void addBook(String title, String author, double price) {
         // SQL query to check if the book already exists
