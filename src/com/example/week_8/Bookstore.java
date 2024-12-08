@@ -28,8 +28,7 @@ class Bookstore {
                 System.out.println("A new book was inserted successfully!");
             }
         } catch (SQLException e) {
-            System.out.println("Error inserting book: " +
-                    e.getMessage());
+            System.out.println("Error inserting book: " + e.getMessage());
         }
     }
     // Method to retrieve all books
